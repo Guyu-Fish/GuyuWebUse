@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select>
+    <option value="请选择">请选择</option>
+    <option value="0">河北</option>
+    <option value="1">山东</option>
+    <option value="2">北京</option>
+</select>
+<select name="" id="">
+    <option>请选择</option>
+</select>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    let arr = [["秦皇岛","唐山","石家庄"],
+        ["青岛","菏泽","烟台"],
+        ["朝阳","东城","大兴"]];
+    //给第一个下拉选添加值改变事件
+    $("select:first").change(function () {
+        //替换原来的内容为 请选择 起到清空作用
+        $("select:last").html("<option>请选择</option>");
+        let cities = arr[this.value];
+        for (let i = 0; i <cities.length ; i++) {
+            let name = cities[i];
+            let o = $("<option></option>");
+            o.text(name);
+            $("select:last").append(o);
+        }
+    });
+</script>
+</body>
+</html>
