@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" onkeydown="downfn()" onkeyup="upfn()" onkeypress="prfn()">
+<script>
+    //event事件对象 里面装的
+    function downfn() {
+        console.log("键盘按下:"+event.keyCode)
+    }
+    function upfn() {
+        if(a===event.keyCode-48){
+            let a = event.keyCode
+        }else{
+            let a = String.fromCharCode(event.keyCode)
+        }
+
+        console.log(a)
+    }
+    function prfn(){
+        console.log("键盘按下:"+event.keyCode )
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuyuWebform表单</title>
+</head>
+<body>
+<!-- action提交地址 -->
+<form action="http://www.tmooc.cn">
+    <!--placeholder 占位文本-->
+    <!--name是所有控件必须添加的属性 否则不提交该数据-->
+    <!--maxlength 最大字符长度限制-->
+    <!--value 设置默认值-->
+    <!--readonly 设置只读 -->
+    用户名:<input type="text" name="username"
+                  maxlength="6"
+                  value="Guyu"
+                  readonly="readonly"
+                  placeholder="请输入用户名"><br>
+    密码:<input type="password" name="password"
+                  maxlength="6"
+                  value="guyufish"
+                  readonly="readonly"
+                  placeholder="请输入密码"><br>
+    <!-- 单选框 必须写相同的name-->
+    <!-- 如果不加value 提交的内容是on 必须写value指定提交的内容 -->
+    性别:<input type="radio" name="gender" value="man"
+              id="r1"><label for="r1">男</label>
+    <!-- checked 设置默认选中 -->
+    <input type="radio" name="gender" value="woman"
+                           checked="checked"
+              id="r2"><label for="r2">女</label><br>
+    <!--单选多选属性通用-->
+    兴趣爱好:<input type="checkbox" name="hobby" value="G"
+                id="G"><label for="G">G</label>
+    <input type="checkbox" name="hobby" value="U"
+                id="U"><label for="U">U</label>
+    <input type="checkbox" name="hobby" value="Y"
+                id="Y"><label for="Y">Y</label><br>
+    <!-- 日期选择器 date  -->
+    生日:<input type="date" name="birthday"><br>
+    <!-- 文件选择器 file  -->
+    照片:<input type="file" name="pic"><br>
+    <!-- 文本域 cols行数 rows列数-->
+    自我介绍:<textarea name="intro"
+                   placeholder="说点什么..."
+                   cols="20" rows="3"></textarea><br>
+    <!-- 下拉选 -->
+    所在地:<select name="city">
+    <option value="bj" selected="selected">北京</option>
+    <option value="sh">上海</option>
+    <option value="gz">广州</option>
+</select><br>
+<input type="submit" value="注册">
+<!-- 重置按钮  -->
+<input type="reset" value="重置">
+<!-- 自定义按钮 -->
+<input type="button" value="自定义">
+</form>
+</body>
+</html>

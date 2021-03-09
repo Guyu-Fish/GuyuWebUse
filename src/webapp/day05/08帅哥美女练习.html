@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="图片1" onclick="myfu(1)">
+<input type="button" value="图片2" onclick="myfu(2)">
+<div id="d1"></div>
+<script>
+    function myfu(x) {
+        switch (x) {
+            case 1:
+                d1.innerHTML+="<img src='java.png'>";
+                break;
+            case 2:
+                d1.innerHTML+="<img src='Eclipse.png'>";
+                break;
+        }
+
+    }
+</script>
+</body>
+</html>

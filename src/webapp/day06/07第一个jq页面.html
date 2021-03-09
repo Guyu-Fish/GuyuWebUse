@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="button" value="按钮" id="b1">
+<div id="d1"></div>
+<!--引入jQuery框架-->
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    //等效于Js动态绑定
+    //给按钮添加点击事件
+    //$是选择器的作用
+    //jQuery中的事件名都比Js中的少一个“on”
+    $("#b1").click(function(){
+        //alert("按钮被点击了")
+        $("#d1").text($("#i1").val())
+        //i1是Js对象表示文本框   $("#i1") 是jq对象
+    })
+</script>
+</body>
+</html>

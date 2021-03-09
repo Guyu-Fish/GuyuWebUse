@@ -1,0 +1,97 @@
+JavaScript
+作用：用于给页面添加动态效果
+特点：属于脚本语言不需要编译，直接解析执行
+     属于弱类型语言，变量声明不需要指定类型
+     基于面向对象 和面向对象语言类似
+     安全性高：JavaScript语言只能访问当前设备中浏览器
+             内部的数据，浏览器以外的数据禁止访问
+     交互性强：JavaScript语言直接嵌入到html页面中，该语言值运行
+             在客户端浏览器中的语言，可以和用户直接进行交互
+如何在HTML页面中添加Js代码
+内联：在标签的事件属性中添加js代码，
+     事件：是系统给提供的一些特定时间点
+          1.点击事件：当用户点击的时候
+
+内部：在html页面中的任意位置添加<script>
+外部:
+
+JavaScript语法
+变量，数据类型，运算符，各种语句，方法，面向对象
+
+变量：属于弱类型语言 变量声明不需要指定类型 let x=10; let x="xyz";  不报错
+声明变量时使用var和let的区别
+推荐使用let，使用let声明变量的作用域与Java类似
+    使用var声明变量，变量属于全局变量
+数据类型
+Js中不分基本数据类型和引用类型，统称对象类型
+几种常见的对象类型：
+1.数值：number 相当于Java中所有数值类型的总和
+2.字符串：string 和Java类似 但是单双引号修饰的都是字符串
+3.布尔值：boolen true/false
+4.未定义：undefined  当变量只声明不赋值，处于未定义状态
+typeof变量：获取变量的对象类型
+
+运算符：
+和Java大体相同
+算术运算符：+-*/% 除法会自动转换整数或小数
+
+关系运算符：>< >= <= != == ===
+== 先统一等号两边的类型再比较值    “666” == 666  true
+=== 先比较类型，类型相同再比较值   “666” === 666 false
+
+逻辑运算符：&& || !
+赋值运算符：= += -= *= /= %= ++ --
+三目运算符： 条件？值1：值2
+
+各种语句
+if else for while do-while switch case  用法和Java相同
+
+方法声明
+格式：Java格式 public 返回值 方法名（参数列表） {方法体}
+     Js格式   function 方法名 （参数列）{方法体}
+声明常见的四种类型：
+
+三种声明方法的格式
+1.
+2.
+3.let 方法名 = new Function("参数1","参数2","参数3")
+
+和页面相关的方法
+1.通过元素的id获取元素对象
+
+2.获取和修改元素的文本内容
+
+3.获取和修改控件的值
+i.value 获取控件的值
+1.value = "xxx" 修改控件的值
+
+NaN
+Not a Number
+isNaN(变量)  true表示是NaN
+             false表示不是NaN 是数
+
+获取HTML内容
+
+JavaScript对象分类
+分为三大类：
+内置对象  string number boolean等
+BOM      Browser Object Model      浏览器对象模型 包含 和浏览器相关的内容
+DOM      Docunment Object Model    文档对象模型 包含页面相关的页面
+
+BOM浏览器对象模型
+window对象：该对象里面的属性和方法称为全局属性和全局方法，访问时可以省略window
+window.alert()
+window.isNaN()
+window.parselnt()
+
+alert    弹出提示框
+confirm  弹出确认框
+prompt() 弹出文本框
+isNaN()判断变量是否是NaN
+parseInt()
+parse
+
+let timer = setInterval 开启定时器
+setTimeout(方法时间间隔) 只执行一次的定时器
+
+

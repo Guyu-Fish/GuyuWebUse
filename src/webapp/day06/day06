@@ -1,0 +1,127 @@
+windows对象中常见的属性
+location 位置 访问的地址
+  location.href 获取访问，修改的地址
+  location.reload() 让页面刷新
+  location.search 获取浏览器地址后面的请求参数
+
+  history：历史  不是浏览历史
+  其为浏览器当前窗口的历史
+  history.back()返回上一页面
+  history.forward()前往下一页面
+
+  screen 屏幕
+  screen.width/height 获取宽高分辨率
+
+  navigator 导航/帮助
+   navigator.userAgent
+
+事件相关
+   事件就是系统给提供的一些时间点，包括鼠标事件/键盘事件和状态改变事件
+鼠标事件
+  onclick：鼠标点击事件
+  onmouseover：鼠标移入事件
+  onmousedown: 鼠标抬起事件
+  onmousemove: 鼠标移动事件
+
+键盘事件
+  onkeydown 键盘按下
+  onkeyup   键盘抬起
+
+  onchange值改变事件 selec标签
+
+  失去焦点事件
+  onblur
+
+  窗口尺寸改变事件
+
+状态改变事件
+onload
+onchange
+onblur
+onresize
+
+事件绑定
+事件属性绑定：在元素里面添加事件属性
+动态绑定：通过js代码给元素添加事件，工作中动态绑定用的比较多
+
+事件冒泡（事件传递）
+在某个范围如果有多个元素的事件需要触发，事件是从最底层往最上层传递，
+类似气泡
+
+DOM文档对象模型，包括页面相关内容
+通过id获取元素对象 document.getElementByld("id")   方法较为繁琐
+由于Js中和页面相关的内容比较繁琐，JQuery解决了此问题，可以让程序员更高效
+的开发页面动态效果
+
+jQuery框架 实际为 外部的Js文件 通过标签属性，引入到html页面中即可使用
+
+同名+min 二者功能相同 带min的不能读，但是小
+
+Js对象 Jq对象 不是同一种对象 彼此的方法也不能互相调用
+
+Js对象 Jq对象 相互转换
+js->jq  let jq = $(js)
+jq->js  let js = jq[0]; jq对象本质是个数组 里面装的是js对象
+
+jQuery中的选择器
+基础选择器： 用法和CSS一样
+标签名 $("div")
+id选择器
+class类选择器
+分组选择器
+任意元素选择器
+
+层级选择器
+$("div span")匹配div里面的所有span 子孙后代选择器
+$("div>span")匹配div里面的子元素span 子元素选择器
+层级相关方法：
+$("#abc").next() 匹配id为abc元素的弟弟元素
+$("#abc").nextAll() 匹配id为abc元素的弟弟们元素
+$("#abc").prev() 匹配id为abc元素的哥哥元素
+$("#abc").siblings() 匹配id为abc元素的所有兄弟元素
+$("#abc").parent() 匹配id为abc元素的父元素
+$("#abc").children() 匹配id为abc元素的子元素们
+
+过滤选择器
+$("div:first") 匹配所有div中的第一个div
+$("div:last")  匹配所有div中的最后一个
+$("div:eq(n)") 匹配下标为n的div 下标从0开始
+$("div:gt(n)") 匹配下标大于n的div
+$("div:not(.abc)") 匹配所有不是“.abc”
+
+内容选择器
+$("div:has(p)") 匹配含p子元素的div
+$("div:empty")  匹配空的div
+$("div:paernt") 匹配非空的div
+$("div:contains('xxx')") 匹配包含xxx文本的div
+
+可见选择器：
+$("div:visable")匹配所有显示的div
+$("div:hidden")匹配所有隐藏的div
+显示隐藏的相关方法
+
+$("#abc").show()
+$("#abc").hide()
+$("#abc").toggle() 切换显示隐藏
+
+属性选择器
+$("div[属性名]") 匹配包含xxx属性的div
+$("div[属性名！='值'") 匹配xxx属性=xxx值的div
+
+子元素选择器
+$("div:f")
+$()
+
+表单选择器
+$(":input")匹配表单中的所有控件
+$(":password")匹配所有密码框
+$(":radio")匹配所有单选
+$(":checkbox")匹配所有多选
+$(":checked")匹配所有选中的单选/多选和下拉选
+
+
+
+
+
+
+
