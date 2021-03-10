@@ -16,9 +16,10 @@
      }
     </style>
 </head>
-<>
+<body>
 <h3 id="s_h3">成功数量:0</h3>
 <h3 id="f_h3">失败数量:0</h3>
+<input type="button" value="后退">
 
 <script src="../../js/jquery-1.4.2.js"></script>
 <script>
@@ -75,7 +76,7 @@
            $("#s_h3").text("成功数量"+sCount);
         })
 
-    },100)
+    },1000)
 
     //开启移动僵尸的计时器
     setInterval(function () {
@@ -100,8 +101,13 @@
             }
         })
     },10)
-
-
+    $("input").click(function () {
+        $("img").each(function () {
+            let left = parseInt($(this).css("left"));
+            left+=100;
+            $(this).css("left",left+"px")
+        })
+    })
 </script>
 </body>
 </html>

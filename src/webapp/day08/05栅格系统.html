@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap Template</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+  <style>
+   div{border: 1px solid black}
+    hr{border: 2px solid red}
+  </style>
+</head>
+<body>
+<!--栅格系统  div.row-->
+<input type="button" value="移动">
+<div class="row">
+  <div class="col-md-6">占6列</div>
+  <div class="col-md-6">占6列</div>
+</div>
+<!--居中-->
+<div class="container">
+  <!--通过cointainer容器实现居中-->
+  <div class="row">
+    <div class="col-md-6">占6列</div>
+    <div class="col-md-6">占6列</div>
+  </div>
+</div>
+<hr>
+<!--练习创建一行1：2：3 三部分-->
+<!--练习创建一行1：2：1 三部分-->
+<!--练习创建一行3：2：2：3：2  五部分并居中-->
+
+<div class="row">
+  <div class="col-md-2">1</div>
+  <div class="col-md-4">2</div>
+  <div class="col-md-6">3</div>
+
+  <div class="col-md-3">3</div>
+  <div class="col-md-6">6</div>
+  <div class="col-md-3">3</div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-3">3</div>
+  <div class="col-md-2">2</div>
+  <div class="col-md-2">2</div>
+  <div class="col-md-3">3</div>
+  <div class="col-md-2">2</div>
+  </div>
+</div>
+<h3>列偏移</h3>
+<div class="col-md-8 col-md-offset-4">占8列 向右偏移两列</div>
+<div id="d1" class="col-md-4">占4列</div>
+<br>
+<br>
+<h3>响应式栅格系统</h3>
+<div class="row">
+  <!--col-md 设置中等显示器 col-sm 设置平板设备 col-xs 设置手机设备-->
+  <div class="col-md-2 col-sm-3 col-xs-6">Test</div>
+  <div class="col-md-2 col-sm-3 col-xs-6">Test</div>
+  <div class="col-md-2 col-sm-3 col-xs-6">Test</div>
+  <div class="col-md-2 col-sm-3 col-xs-6">Test</div>
+  <div class="col-md-2 col-sm-3 col-xs-6">Test</div>
+  <div class="col-md-2 col-sm-3 col-xs-6">Test</div>
+</div>
+<div class="row">
+  <div class="col-md-2 col-sm-3 col-xs-6"><img src="../IDEAx.png" alt="" class="img-responsive"></div>
+  <div class="col-md-2 col-sm-3 col-xs-6"><img src="../IDEAx.png" alt="" class="img-responsive"></div>
+  <div class="col-md-2 col-sm-3 col-xs-6"><img src="../IDEAx.png" alt="" class="img-responsive"></div>
+  <div class="col-md-2 col-sm-3 col-xs-6"><img src="../IDEAx.png" alt="" class="img-responsive"></div>
+  <div class="col-md-2 col-sm-3 col-xs-6"><img src="../IDEAx.png" alt="" class="img-responsive"></div>
+  <div class="col-md-2 col-sm-3 col-xs-6"><img src="../IDEAx.png" alt="" class="img-responsive"></div>
+
+</div>
+</body>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+  $("input").click(function () {
+    $("#d1").animate({"left":"620px"},1000)
+  })
+</script>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>
